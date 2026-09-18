@@ -1,0 +1,1158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f7f7f5">
+
+  <title>Yoga Hanggara — Lead Full Stack Developer</title>
+  <meta name="description" content="Yoga Hanggara is a Lead Full Stack Developer in Bandung, Indonesia, building reliable SaaS products, cloud-native platforms, and high-performing engineering teams.">
+  <meta name="author" content="Yoga Hanggara">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://thefullstackdev.com/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Yoga Hanggara">
+  <meta property="og:title" content="Yoga Hanggara — Lead Full Stack Developer">
+  <meta property="og:description" content="Building reliable SaaS products, cloud-native platforms, and high-performing engineering teams.">
+  <meta property="og:url" content="https://thefullstackdev.com/">
+  <meta property="og:locale" content="en_US">
+  <meta property="profile:first_name" content="Yoga">
+  <meta property="profile:last_name" content="Hanggara">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Yoga Hanggara — Lead Full Stack Developer">
+  <meta name="twitter:description" content="Building reliable SaaS products, cloud-native platforms, and high-performing engineering teams.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111111'/%3E%3Cpath d='M14 17h9l9 14 9-14h9L36 38v10h-8V38L14 17Z' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yoga Hanggara",
+    "url": "https://thefullstackdev.com/",
+    "jobTitle": "Lead Full Stack Developer",
+    "homeLocation": {
+      "@type": "Place",
+      "name": "Bandung, West Java, Indonesia"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/yoga-hanggara/",
+      "https://github.com/yohangdev",
+      "https://speakerdeck.com/yohangdev",
+      "https://medium.com/@yohangdev",
+      "https://bio.link/yohangdev"
+    ],
+    "knowsAbout": [
+      "Full-stack development",
+      "SaaS product engineering",
+      "Cloud-native architecture",
+      "DevOps",
+      "Engineering leadership",
+      "AI-assisted software development"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --paper: #f7f7f5;
+      --surface: #ffffff;
+      --ink: #111212;
+      --muted: #666966;
+      --line: #dedfda;
+      --line-strong: #c5c7c1;
+      --accent: #2457ff;
+      --accent-soft: #eef2ff;
+      --dark: #111315;
+      --dark-soft: #1a1d20;
+      --dark-line: #2d3135;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --shadow: 0 18px 60px rgba(17, 18, 18, 0.08);
+      --sans: "Public Sans", Arial, sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, monospace;
+      --max: 1180px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.menu-open { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    a, button { -webkit-tap-highlight-color: transparent; }
+    button { font: inherit; }
+    img, svg { display: block; max-width: 100%; }
+    ::selection { background: var(--accent); color: #fff; }
+
+    .skip-link {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 100;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      background: var(--ink);
+      color: #fff;
+      transform: translateY(-150%);
+      transition: transform 160ms ease;
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    :focus-visible {
+      outline: 3px solid rgba(36, 87, 255, 0.38);
+      outline-offset: 3px;
+    }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      padding: 12px 0;
+      background: rgba(247, 247, 245, 0.9);
+      border-bottom: 1px solid rgba(222, 223, 218, 0.7);
+      backdrop-filter: blur(16px);
+    }
+
+    .header-inner {
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.96rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--ink);
+      color: #fff;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: -0.06em;
+    }
+
+    .nav-toggle {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface);
+      color: var(--ink);
+      cursor: pointer;
+    }
+    .nav-toggle svg { width: 20px; height: 20px; }
+    .nav-toggle .close-icon { display: none; }
+    .nav-toggle[aria-expanded="true"] .menu-icon { display: none; }
+    .nav-toggle[aria-expanded="true"] .close-icon { display: block; }
+
+    .site-nav {
+      position: fixed;
+      inset: 77px 16px auto 16px;
+      display: none;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .site-nav.is-open { display: grid; }
+    .site-nav a {
+      min-height: 46px;
+      display: flex;
+      align-items: center;
+      padding: 0 14px;
+      border-radius: 8px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .site-nav a:hover,
+    .site-nav a[aria-current="true"] { background: #f0f1ee; color: var(--ink); }
+
+    .button.header-cta { display: none; }
+
+    .button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 18px;
+      border: 1px solid var(--ink);
+      border-radius: var(--radius-sm);
+      background: var(--ink);
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 700;
+      line-height: 1;
+      transition: transform 160ms ease, background-color 160ms ease, color 160ms ease;
+    }
+    .button:hover { transform: translateY(-2px); background: #2a2c2c; }
+    .button.secondary { background: transparent; color: var(--ink); border-color: var(--line-strong); }
+    .button.secondary:hover { background: var(--surface); }
+    .button.light { background: #fff; color: var(--ink); border-color: #fff; }
+    .button.light:hover { background: #ebede8; }
+    .button svg { width: 16px; height: 16px; flex: 0 0 auto; }
+
+    .hero { padding: 38px 0 22px; }
+    .hero-grid { display: grid; gap: 16px; }
+    .hero-copy,
+    .hero-panel {
+      min-height: 480px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .hero-copy {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: clamp(26px, 6vw, 58px);
+      background: var(--surface);
+    }
+    .hero-copy::after {
+      content: "";
+      position: absolute;
+      right: -110px;
+      bottom: -110px;
+      width: 260px;
+      height: 260px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      box-shadow: 0 0 0 40px var(--paper), 0 0 0 41px var(--line);
+      pointer-events: none;
+    }
+
+    .eyebrow,
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+    .eyebrow::before,
+    .section-label::before {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: currentColor;
+      flex: 0 0 auto;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 790px;
+      margin-bottom: 24px;
+      font-size: clamp(2.6rem, 8.2vw, 5.6rem);
+      line-height: 0.98;
+      letter-spacing: -0.065em;
+      font-weight: 600;
+    }
+    h1 .accent { color: var(--accent); }
+    .hero-intro {
+      max-width: 650px;
+      margin-bottom: 34px;
+      color: #4d504d;
+      font-size: clamp(1.04rem, 2vw, 1.22rem);
+      line-height: 1.6;
+    }
+    .hero-actions { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .hero-panel {
+      position: relative;
+      padding: 24px;
+      background: var(--dark);
+      color: #fff;
+    }
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.38;
+      background-image:
+        linear-gradient(var(--dark-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--dark-line) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, #000 0%, transparent 75%);
+      pointer-events: none;
+    }
+    .panel-top,
+    .panel-main,
+    .panel-foot { position: relative; z-index: 1; }
+    .panel-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--dark-line);
+      color: #aeb3b6;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .status { display: inline-flex; align-items: center; gap: 8px; }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #73e3a0;
+      box-shadow: 0 0 0 4px rgba(115, 227, 160, 0.12);
+    }
+    .panel-main { padding: 42px 0 28px; }
+    .panel-kicker {
+      margin-bottom: 12px;
+      color: #959b9f;
+      font-family: var(--mono);
+      font-size: 0.74rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .panel-main h2 {
+      max-width: 470px;
+      margin-bottom: 28px;
+      font-size: clamp(1.9rem, 6vw, 3.5rem);
+      line-height: 1.03;
+      letter-spacing: -0.045em;
+      font-weight: 600;
+    }
+    .signal-list { display: grid; gap: 0; border-top: 1px solid var(--dark-line); }
+    .signal {
+      display: grid;
+      grid-template-columns: 44px 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--dark-line);
+    }
+    .signal-index,
+    .signal-note {
+      color: #858b8f;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+    }
+    .signal-name { font-size: 0.92rem; font-weight: 600; }
+    .panel-foot {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 18px;
+      padding-top: 22px;
+      color: #aeb3b6;
+      font-size: 0.82rem;
+    }
+    .panel-foot strong { display: block; color: #fff; font-size: 0.92rem; }
+    .coordinate { font-family: var(--mono); font-size: 0.68rem; text-align: right; }
+
+    .metric-strip {
+      margin-bottom: 86px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--ink);
+      color: #fff;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .metric {
+      min-height: 126px;
+      padding: 22px;
+      border-right: 1px solid #323434;
+      border-bottom: 1px solid #323434;
+    }
+    .metric:nth-child(2n) { border-right: 0; }
+    .metric-value {
+      display: block;
+      margin-bottom: 8px;
+      font-size: clamp(1.9rem, 7vw, 3.2rem);
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.055em;
+    }
+    .metric-label { color: #aeb1b1; font-size: 0.78rem; line-height: 1.45; }
+
+    .section { padding: 74px 0; border-top: 1px solid var(--line); }
+    .section-head {
+      display: grid;
+      gap: 18px;
+      margin-bottom: 42px;
+    }
+    .section-title {
+      max-width: 820px;
+      margin-bottom: 0;
+      font-size: clamp(2.1rem, 6.5vw, 4.4rem);
+      font-weight: 600;
+      line-height: 1.03;
+      letter-spacing: -0.055em;
+    }
+    .section-lead {
+      max-width: 600px;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .about-grid { display: grid; gap: 36px; }
+    .about-copy { max-width: 760px; }
+    .about-copy p { font-size: clamp(1.15rem, 2.7vw, 1.5rem); line-height: 1.58; letter-spacing: -0.018em; }
+    .about-copy p:last-child { margin-bottom: 0; }
+    .principles { border-top: 1px solid var(--line-strong); }
+    .principle {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 12px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .principle span { font-family: var(--mono); color: var(--accent); font-size: 0.75rem; }
+    .principle strong { display: block; margin-bottom: 4px; font-size: 0.98rem; }
+    .principle p { margin: 0; color: var(--muted); font-size: 0.88rem; line-height: 1.5; }
+
+    .work-grid { display: grid; gap: 16px; }
+    .case-study {
+      position: relative;
+      display: flex;
+      min-height: 410px;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: clamp(24px, 4vw, 36px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      overflow: hidden;
+    }
+    .case-study.featured {
+      background: var(--dark);
+      color: #fff;
+      border-color: var(--dark);
+    }
+    .case-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 54px;
+      font-family: var(--mono);
+      color: var(--muted);
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .featured .case-meta { color: #92989b; }
+    .case-number { color: var(--accent); }
+    .case-study h3 {
+      max-width: 560px;
+      margin-bottom: 16px;
+      font-size: clamp(1.7rem, 4vw, 2.65rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+    .case-study p { color: var(--muted); font-size: 0.94rem; }
+    .featured p { color: #b9bdbe; }
+    .outcomes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 28px;
+    }
+    .outcome { padding-top: 15px; border-top: 1px solid var(--line); }
+    .featured .outcome { border-color: var(--dark-line); }
+    .outcome strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1.35rem;
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+    }
+    .outcome span { color: var(--muted); font-size: 0.72rem; line-height: 1.35; }
+    .featured .outcome span { color: #92989b; }
+
+    .career-layout { display: grid; gap: 36px; }
+    .career-intro { max-width: 540px; }
+    .career-intro p { color: var(--muted); }
+    .career-list { border-top: 1px solid var(--line-strong); }
+    .career-item {
+      display: grid;
+      gap: 12px;
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .career-date {
+      font-family: var(--mono);
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .career-role h3 { margin-bottom: 2px; font-size: 1.16rem; letter-spacing: -0.02em; }
+    .career-role p { margin-bottom: 0; color: var(--muted); font-size: 0.9rem; }
+    .career-summary { color: #4f5250; font-size: 0.92rem; }
+
+    .capability-grid { display: grid; border-top: 1px solid var(--line-strong); }
+    .capability {
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .capability-index { display: block; margin-bottom: 34px; color: var(--accent); font-family: var(--mono); font-size: 0.72rem; }
+    .capability h3 { margin-bottom: 14px; font-size: 1.24rem; letter-spacing: -0.025em; }
+    .capability ul { margin: 0; padding: 0; list-style: none; color: var(--muted); font-size: 0.9rem; }
+    .capability li { padding: 5px 0; }
+
+    .recommendation-grid {
+      display: grid;
+      border-top: 1px solid var(--line-strong);
+      border-bottom: 1px solid var(--line-strong);
+    }
+    .recommendation {
+      display: flex;
+      min-height: 360px;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .recommendation:last-child { border-bottom: 0; }
+    .quote-mark {
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .recommendation blockquote { margin: 42px 0; }
+    .recommendation blockquote p {
+      max-width: 480px;
+      margin-bottom: 0;
+      font-size: clamp(1.75rem, 5vw, 3rem);
+      font-weight: 500;
+      line-height: 1.12;
+      letter-spacing: -0.045em;
+    }
+    .recommendation-person {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+    .recommendation-person strong { display: block; margin-bottom: 3px; font-size: 0.94rem; }
+    .recommendation-person span { display: block; color: var(--muted); font-size: 0.78rem; line-height: 1.45; }
+    .recommendation-person a {
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      white-space: nowrap;
+    }
+    .recommendation-person a:hover { color: var(--accent); }
+
+    .community-shell {
+      display: grid;
+      gap: 24px;
+      padding: clamp(26px, 5vw, 54px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+    }
+    .community-copy h2 { max-width: 640px; }
+    .community-copy p { max-width: 600px; color: var(--muted); }
+    .link-list { border-top: 1px solid var(--line-strong); }
+    .profile-link {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 16px;
+      min-height: 66px;
+      border-bottom: 1px solid var(--line);
+      font-weight: 600;
+      transition: padding-left 160ms ease, color 160ms ease;
+    }
+    .profile-link:hover { padding-left: 8px; color: var(--accent); }
+    .profile-link small { display: block; color: var(--muted); font-family: var(--mono); font-size: 0.67rem; font-weight: 400; }
+    .profile-link svg { width: 18px; height: 18px; }
+
+    .contact { padding: 86px 0 24px; }
+    .contact-card {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(30px, 7vw, 76px);
+      border-radius: var(--radius-lg);
+      background: var(--dark);
+      color: #fff;
+    }
+    .contact-card::after {
+      content: "";
+      position: absolute;
+      right: -100px;
+      bottom: -100px;
+      width: 300px;
+      height: 300px;
+      border: 1px solid #34383b;
+      border-radius: 50%;
+      box-shadow: 0 0 0 50px var(--dark), 0 0 0 51px #34383b;
+      pointer-events: none;
+    }
+    .contact-card .section-label { color: #979d9f; }
+    .contact-card h2 {
+      position: relative;
+      z-index: 1;
+      max-width: 850px;
+      margin-bottom: 24px;
+      font-size: clamp(2.3rem, 7vw, 5rem);
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+    .contact-card p { position: relative; z-index: 1; max-width: 600px; color: #b8bcbd; }
+    .contact-actions { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+
+    .site-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 26px 0 10px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.7rem;
+    }
+    .site-footer a:hover { color: var(--ink); }
+
+    @media (min-width: 700px) {
+      .container { width: min(calc(100% - 56px), var(--max)); }
+      .metric-strip { grid-template-columns: repeat(4, 1fr); }
+      .metric { min-height: 152px; padding: 28px; border-bottom: 0; }
+      .metric:nth-child(2n) { border-right: 1px solid #323434; }
+      .metric:last-child { border-right: 0; }
+      .section-head { grid-template-columns: 1.25fr 0.75fr; align-items: end; }
+      .section-lead { justify-self: end; }
+      .about-grid { grid-template-columns: 1.3fr 0.7fr; align-items: start; }
+      .work-grid { grid-template-columns: repeat(2, 1fr); }
+      .case-study.featured { grid-column: 1 / -1; min-height: 480px; }
+      .career-item { grid-template-columns: 126px minmax(190px, 0.8fr) 1.2fr; gap: 24px; align-items: start; }
+      .capability-grid { grid-template-columns: repeat(2, 1fr); }
+      .capability { padding: 30px; border-right: 1px solid var(--line); }
+      .capability:nth-child(2n) { border-right: 0; }
+      .recommendation-grid { grid-template-columns: repeat(2, 1fr); }
+      .recommendation { padding: 38px; border-right: 1px solid var(--line); border-bottom: 0; }
+      .recommendation:last-child { border-right: 0; }
+      .community-shell { grid-template-columns: 1fr 0.8fr; align-items: start; }
+      .site-footer { flex-direction: row; justify-content: space-between; align-items: center; }
+    }
+
+    @media (min-width: 960px) {
+      .site-header { padding: 18px 0; border-bottom-color: transparent; }
+      .nav-toggle { display: none; }
+      .site-nav {
+        position: static;
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        padding: 5px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.72);
+      }
+      .site-nav a { min-height: 34px; padding: 0 14px; font-size: 0.76rem; }
+      .button.header-cta { display: inline-flex; min-height: 42px; }
+      .hero { padding-top: 22px; }
+      .hero-grid { grid-template-columns: minmax(0, 1.6fr) minmax(360px, 0.78fr); }
+      .hero-copy,
+      .hero-panel { min-height: 670px; }
+      .hero-panel { padding: 30px; }
+      .panel-main { padding-top: 88px; }
+      .metric-strip { margin-bottom: 112px; }
+      .section { padding: 102px 0; }
+      .case-study.featured { grid-column: auto; grid-row: span 2; min-height: 100%; }
+      .case-study:not(.featured) { min-height: 390px; }
+      .career-layout { grid-template-columns: 0.48fr 1fr; gap: 80px; }
+      .career-intro { position: sticky; top: 118px; }
+      .capability-grid { grid-template-columns: repeat(4, 1fr); }
+      .capability { min-height: 330px; }
+      .capability:nth-child(2n) { border-right: 1px solid var(--line); }
+      .capability:last-child { border-right: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Yoga Hanggara, home">
+        <span class="brand-mark" aria-hidden="true">YH</span>
+        <span>Yoga Hanggara</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#work">Selected work</a>
+        <a href="#experience">Experience</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#recommendations">Recommendations</a>
+      </nav>
+
+      <a class="button header-cta" href="https://www.linkedin.com/in/yoga-hanggara/" target="_blank" rel="me noreferrer">
+        Connect
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation">
+        <svg class="menu-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="close-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div>
+            <p class="eyebrow">Lead Full Stack Developer · Bandung, Indonesia</p>
+            <h1 id="hero-title">Reliable software for <span class="accent">complex work.</span></h1>
+            <p class="hero-intro">I build and lead the systems behind SaaS products, public services, and high-performing engineering teams—from product architecture to the path into production.</p>
+          </div>
+          <div class="hero-actions">
+            <a class="button" href="#work">
+              Explore selected work
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="button secondary" href="https://github.com/yohangdev" target="_blank" rel="me noreferrer">GitHub</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Professional profile overview">
+          <div class="panel-top">
+            <span>System profile / 2026</span>
+            <span class="status"><span class="status-dot" aria-hidden="true"></span>Building</span>
+          </div>
+          <div class="panel-main">
+            <p class="panel-kicker">Operating across</p>
+            <h2>Product, platform &amp; people.</h2>
+            <div class="signal-list">
+              <div class="signal">
+                <span class="signal-index">01</span>
+                <span class="signal-name">SaaS product engineering</span>
+                <span class="signal-note">Build</span>
+              </div>
+              <div class="signal">
+                <span class="signal-index">02</span>
+                <span class="signal-name">Cloud-native systems</span>
+                <span class="signal-note">Scale</span>
+              </div>
+              <div class="signal">
+                <span class="signal-index">03</span>
+                <span class="signal-name">Delivery &amp; reliability</span>
+                <span class="signal-note">Run</span>
+              </div>
+              <div class="signal">
+                <span class="signal-index">04</span>
+                <span class="signal-name">Engineering leadership</span>
+                <span class="signal-note">Lead</span>
+              </div>
+            </div>
+          </div>
+          <div class="panel-foot">
+            <span><strong>15+ years</strong> shipping software</span>
+            <span class="coordinate">6.9175° S<br>107.6191° E</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="metric-strip" aria-label="Selected career outcomes">
+        <div class="metric">
+          <strong class="metric-value">6.5M</strong>
+          <span class="metric-label">citizens reached by a public-service platform</span>
+        </div>
+        <div class="metric">
+          <strong class="metric-value">50–60%</strong>
+          <span class="metric-label">lower monthly Google Cloud infrastructure cost</span>
+        </div>
+        <div class="metric">
+          <strong class="metric-value">99.995%</strong>
+          <span class="metric-label">availability achieved in a high-demand environment</span>
+        </div>
+        <div class="metric">
+          <strong class="metric-value">Daily</strong>
+          <span class="metric-label">production delivery, improved from multi-week cycles</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-label">About</p>
+            <h2 class="section-title" id="about-title">Engineering with the whole system in view.</h2>
+          </div>
+          <p class="section-lead">Useful software is more than code. It is product judgment, resilient infrastructure, a clear delivery process, and a team that can improve it safely.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>I’m a Lead Full Stack Developer with more than 15 years of experience designing, building, modernising, and operating web platforms.</p>
+            <p>My work spans SaaS products, large-scale public services, and enterprise systems across government, finance, education, utilities, and B2B technology. I combine product engineering, cloud-native architecture, reliable delivery, and technical leadership to turn complex operations into clear, measurable software.</p>
+          </div>
+          <div class="principles" aria-label="Working principles">
+            <div class="principle">
+              <span>01</span>
+              <div><strong>Start with the operation</strong><p>Understand the real workflow before choosing the technical shape.</p></div>
+            </div>
+            <div class="principle">
+              <span>02</span>
+              <div><strong>Measure the system</strong><p>Use observability and feedback to replace assumptions with evidence.</p></div>
+            </div>
+            <div class="principle">
+              <span>03</span>
+              <div><strong>Improve the path</strong><p>Make delivery repeatable, reviewable, and safe for a small team.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-label">Selected work</p>
+            <h2 class="section-title" id="work-title">Complex systems, measurable outcomes.</h2>
+          </div>
+          <p class="section-lead">A selection of product and platform work spanning SaaS, public services, and enterprise delivery.</p>
+        </div>
+
+        <div class="work-grid">
+          <article class="case-study featured">
+            <div>
+              <div class="case-meta"><span>Podiem · SalesPond Group</span><span class="case-number">Case / 01</span></div>
+              <h3>Turning a sales operation into a dependable product system.</h3>
+              <p>Leading full-stack product development for Podiem, a sales engagement platform combining campaigns, multi-channel outreach, telephony, lead qualification, CRM integrations, gamification, and reporting.</p>
+            </div>
+            <div class="outcomes" aria-label="Podiem outcomes">
+              <div class="outcome"><strong>50–60%</strong><span>lower monthly cloud infrastructure cost</span></div>
+              <div class="outcome"><strong>Multiple / day</strong><span>production deployments</span></div>
+              <div class="outcome"><strong>&lt; 2 hours</strong><span>service restoration target achieved</span></div>
+              <div class="outcome"><strong>4 people</strong><span>focused engineering team led</span></div>
+            </div>
+          </article>
+
+          <article class="case-study">
+            <div>
+              <div class="case-meta"><span>PIKOBAR · Jabar Digital Service</span><span class="case-number">Case / 02</span></div>
+              <h3>Public infrastructure built for pandemic-scale demand.</h3>
+              <p>Led engineering for a government super-app created to support pandemic response in West Java, bringing reliable digital services to millions of citizens during a period of exceptional demand.</p>
+            </div>
+            <div class="outcomes" aria-label="PIKOBAR outcomes">
+              <div class="outcome"><strong>6.5M</strong><span>total users reached</span></div>
+              <div class="outcome"><strong>500K</strong><span>peak daily active users</span></div>
+            </div>
+          </article>
+
+          <article class="case-study">
+            <div>
+              <div class="case-meta"><span>KPK &amp; LKPP RI · Javan</span><span class="case-number">Case / 03</span></div>
+              <h3>Modernising critical public-sector platforms.</h3>
+              <p>Led development of KPK’s integrated case management system and introduced Elasticsearch and the ELK Stack to improve search speed and relevance for Indonesia’s government e-catalogue.</p>
+            </div>
+            <div class="outcomes" aria-label="Public-sector outcomes">
+              <div class="outcome"><strong>1,000+</strong><span>KPK internal staff supported</span></div>
+              <div class="outcome"><strong>Cloud-native</strong><span>containers, services, monitoring, and CI/CD</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container career-layout">
+        <div class="career-intro">
+          <p class="section-label">Experience</p>
+          <h2 class="section-title" id="experience-title">From web delivery to product leadership.</h2>
+          <p>A career shaped by progressively larger operating environments: institutional websites, enterprise platforms, citizen-facing infrastructure, and SaaS products.</p>
+          <a class="button secondary" href="https://www.linkedin.com/in/yoga-hanggara/" target="_blank" rel="me noreferrer">
+            Full profile on LinkedIn
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 5h8v8M15 5 5 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="career-list">
+          <article class="career-item">
+            <div class="career-date">Oct 2025 — Now</div>
+            <div class="career-role"><h3>Lead Full Stack Developer</h3><p>SalesPond Group</p></div>
+            <div class="career-summary">Leading product engineering for Podiem across architecture, delivery, reliability, cloud cost, developer experience, and AI-assisted workflows.</div>
+          </article>
+          <article class="career-item">
+            <div class="career-date">Jan 2020 — Sep 2025</div>
+            <div class="career-role"><h3>Engineering Lead</h3><p>Jabar Digital Service</p></div>
+            <div class="career-summary">Led a six-person team delivering high-scale government services, including PIKOBAR, while helping the wider engineering organisation grow from 8 to 70 people.</div>
+          </article>
+          <article class="career-item">
+            <div class="career-date">Mar 2019 — Jan 2020</div>
+            <div class="career-role"><h3>Senior Backend Engineer</h3><p>Jabar Digital Service</p></div>
+            <div class="career-summary">Built and operated backend services for citizen-facing public products in a fast-moving government technology environment.</div>
+          </article>
+          <article class="career-item">
+            <div class="career-date">Jan 2014 — Feb 2019</div>
+            <div class="career-role"><h3>Senior Web Developer</h3><p>PT Javan Cipta Solusi</p></div>
+            <div class="career-summary">Delivered full-stack systems and integrations for KPK, LKPP RI, Kominfo, BTPN, Philips Indonesia, and other public and commercial organisations.</div>
+          </article>
+          <article class="career-item">
+            <div class="career-date">Jun 2011 — Dec 2013</div>
+            <div class="career-role"><h3>Web Developer</h3><p>PT Gamatechno Indonesia</p></div>
+            <div class="career-summary">Built web applications and system integrations for universities and utility-sector organisations across Indonesia.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-label">Capabilities</p>
+            <h2 class="section-title" id="capabilities-title">Built across the product lifecycle.</h2>
+          </div>
+          <p class="section-lead">I work across the boundaries that usually slow delivery down—product and platform, development and operations, technical systems and team systems.</p>
+        </div>
+
+        <div class="capability-grid">
+          <article class="capability">
+            <span class="capability-index">01 / Product</span>
+            <h3>Full-stack engineering</h3>
+            <ul>
+              <li>SaaS product development</li>
+              <li>Responsive web applications</li>
+              <li>APIs and system integration</li>
+              <li>Backend services and databases</li>
+              <li>Authentication and authorisation</li>
+            </ul>
+          </article>
+          <article class="capability">
+            <span class="capability-index">02 / Platform</span>
+            <h3>Cloud &amp; delivery</h3>
+            <ul>
+              <li>Cloud-native architecture</li>
+              <li>Google Cloud infrastructure</li>
+              <li>Containers and orchestration</li>
+              <li>Infrastructure as Code</li>
+              <li>CI/CD and release automation</li>
+            </ul>
+          </article>
+          <article class="capability">
+            <span class="capability-index">03 / Operations</span>
+            <h3>Reliability</h3>
+            <ul>
+              <li>Observability and monitoring</li>
+              <li>Incident response</li>
+              <li>Performance optimisation</li>
+              <li>End-to-end testing</li>
+              <li>Cloud cost optimisation</li>
+            </ul>
+          </article>
+          <article class="capability">
+            <span class="capability-index">04 / People</span>
+            <h3>Engineering leadership</h3>
+            <ul>
+              <li>Technical direction</li>
+              <li>Team culture and mentoring</li>
+              <li>Delivery process improvement</li>
+              <li>AI-agentic development</li>
+              <li>Cross-functional collaboration</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="recommendations" aria-labelledby="recommendations-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-label">Recommendations</p>
+            <h2 class="section-title" id="recommendations-title">Trusted when the work gets complex.</h2>
+          </div>
+          <p class="section-lead">Feedback from colleagues who worked alongside me at Jabar Digital Service.</p>
+        </div>
+
+        <div class="recommendation-grid">
+          <article class="recommendation">
+            <span class="quote-mark">Colleague perspective / 01</span>
+            <blockquote>
+              <p>“Very lucky to have a leader like him.”</p>
+            </blockquote>
+            <div class="recommendation-person">
+              <div>
+                <strong>Muhammad Thofhan Hannanto</strong>
+                <span>Senior Product Manager · Worked on the same team</span>
+              </div>
+              <a href="https://www.linkedin.com/in/yoga-hanggara/details/recommendations/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            </div>
+          </article>
+
+          <article class="recommendation">
+            <span class="quote-mark">Colleague perspective / 02</span>
+            <blockquote>
+              <p>“Great critical thinking… no doubt his capacity in the tech industry.”</p>
+            </blockquote>
+            <div class="recommendation-person">
+              <div>
+                <strong>Alexander Randika</strong>
+                <span>Public Sector &amp; Development Initiatives · JDS colleague</span>
+              </div>
+              <a href="https://www.linkedin.com/in/yoga-hanggara/details/recommendations/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="community-title">
+      <div class="container community-shell">
+        <div class="community-copy">
+          <p class="section-label">Beyond the codebase</p>
+          <h2 class="section-title" id="community-title">Sharing the systems behind the work.</h2>
+          <p>I mentor engineers and share practical lessons on software craftsmanship, cloud-native platforms, DevOps culture, and engineering leadership—including the infrastructure behind West Java’s pandemic response.</p>
+        </div>
+        <div class="link-list" aria-label="Community and social links">
+          <a class="profile-link" href="https://speakerdeck.com/yohangdev" target="_blank" rel="me noreferrer">
+            <span>Presentations<small>Speaker Deck</small></span>
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 5h8v8M15 5 5 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="profile-link" href="https://adplist.org/mentors/yoga-hanggara" target="_blank" rel="me noreferrer">
+            <span>Mentorship<small>ADPList</small></span>
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 5h8v8M15 5 5 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="profile-link" href="https://medium.com/@yohangdev" target="_blank" rel="me noreferrer">
+            <span>Writing<small>Medium</small></span>
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 5h8v8M15 5 5 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="profile-link" href="https://github.com/yohangdev" target="_blank" rel="me noreferrer">
+            <span>Open source &amp; code<small>GitHub</small></span>
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 5h8v8M15 5 5 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-card">
+          <p class="section-label">Let’s connect</p>
+          <h2 id="contact-title">Building something that needs to work in the real world?</h2>
+          <p>I’m always interested in thoughtful conversations about SaaS product engineering, cloud-native systems, reliable delivery, and better ways for engineering teams to work.</p>
+          <div class="contact-actions">
+            <a class="button light" href="https://www.linkedin.com/in/yoga-hanggara/" target="_blank" rel="me noreferrer">
+              Connect on LinkedIn
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="button" href="https://github.com/yohangdev" target="_blank" rel="me noreferrer">Explore GitHub</a>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <span>© <span id="year">2026</span> Yoga Hanggara · Bandung, Indonesia</span>
+          <span><a href="https://thefullstackdev.com/">thefullstackdev.com</a></span>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.site-nav');
+      const links = [...nav.querySelectorAll('a')];
+      const sections = links.map(link => document.querySelector(link.hash)).filter(Boolean);
+
+      const closeMenu = () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open navigation');
+        nav.classList.remove('is-open');
+        document.body.classList.remove('menu-open');
+      };
+
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') !== 'true';
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+        nav.classList.toggle('is-open', open);
+        document.body.classList.toggle('menu-open', open);
+      });
+
+      links.forEach(link => link.addEventListener('click', closeMenu));
+      window.addEventListener('resize', () => { if (window.innerWidth >= 960) closeMenu(); });
+      document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            links.forEach(link => link.removeAttribute('aria-current'));
+            const active = links.find(link => link.hash === `#${entry.target.id}`);
+            if (active) active.setAttribute('aria-current', 'true');
+          });
+        }, { rootMargin: '-30% 0px -60% 0px' });
+        sections.forEach(section => observer.observe(section));
+      }
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
