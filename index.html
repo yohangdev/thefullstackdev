@@ -526,6 +526,9 @@
       color: #fff;
       border-color: var(--dark);
     }
+    .case-study.wide {
+      background: linear-gradient(135deg, var(--surface) 0%, #f3f5ff 100%);
+    }
     .case-meta {
       display: flex;
       flex-wrap: wrap;
@@ -729,6 +732,7 @@
       .about-grid { grid-template-columns: 1.3fr 0.7fr; align-items: start; }
       .work-grid { grid-template-columns: repeat(2, 1fr); }
       .case-study.featured { grid-column: 1 / -1; min-height: 480px; }
+      .case-study.wide { grid-column: 1 / -1; }
       .career-item { grid-template-columns: 126px minmax(190px, 0.8fr) 1.2fr; gap: 24px; align-items: start; }
       .capability-grid { grid-template-columns: repeat(2, 1fr); }
       .capability { padding: 30px; border-right: 1px solid var(--line); }
@@ -768,6 +772,13 @@
       .section { padding: 102px 0; }
       .case-study.featured { grid-column: auto; grid-row: span 2; min-height: 100%; }
       .case-study:not(.featured) { min-height: 390px; }
+      .case-study.wide {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+        gap: 64px;
+        min-height: 360px;
+      }
+      .case-study.wide .outcomes { align-self: end; margin-top: 0; }
       .career-layout { grid-template-columns: 0.48fr 1fr; gap: 80px; }
       .career-intro { position: sticky; top: 118px; }
       .capability-grid { grid-template-columns: repeat(4, 1fr); }
@@ -984,6 +995,20 @@
               <div class="outcome"><strong>Cloud-native</strong><span>containers, services, monitoring, and CI/CD</span></div>
             </div>
           </article>
+
+          <article class="case-study wide">
+            <div>
+              <div class="case-meta"><span>Sapawarga · Jabar Digital Service</span><span class="case-number">Case / 04</span></div>
+              <h3>One super-app for everyday public services.</h3>
+              <p>Led engineering delivery for Sapawarga, West Java’s integrated citizen-services platform, bringing public services, regional information, citizen aspirations, event and destination ticketing, and vehicle-tax services into a single mobile experience.</p>
+            </div>
+            <div class="outcomes" aria-label="Sapawarga outcomes">
+              <div class="outcome"><strong>1M+</strong><span>downloads on Google Play</span></div>
+              <div class="outcome"><strong>4.6 / 5</strong><span>rating on Google Play</span></div>
+              <div class="outcome"><strong>16.6K</strong><span>reviews on Google Play</span></div>
+              <div class="outcome"><strong>Android + iOS</strong><span>available across major mobile platforms</span></div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -1009,7 +1034,7 @@
           <article class="career-item">
             <div class="career-date">Jan 2020 — Sep 2025</div>
             <div class="career-role"><h3>Engineering Lead</h3><p>Jabar Digital Service</p></div>
-            <div class="career-summary">Led a six-person team delivering high-scale government services, including PIKOBAR, while helping the wider engineering organisation grow from 8 to 70 people.</div>
+            <div class="career-summary">Led a six-person team delivering high-scale government services, including PIKOBAR and the Sapawarga super-app, while helping the wider engineering organisation grow from 8 to 70 people.</div>
           </article>
           <article class="career-item">
             <div class="career-date">Mar 2019 — Jan 2020</div>
