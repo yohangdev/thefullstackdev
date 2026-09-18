@@ -553,6 +553,24 @@
     }
     .case-study p { color: var(--muted); font-size: 0.94rem; }
     .featured p { color: #b9bdbe; }
+    .group-context {
+      display: grid;
+      margin-top: 28px;
+      border-top: 1px solid var(--dark-line);
+      border-bottom: 1px solid var(--dark-line);
+    }
+    .group-context-item { padding: 15px 0; }
+    .group-context-item + .group-context-item { border-top: 1px solid var(--dark-line); }
+    .group-context-label {
+      display: block;
+      margin-bottom: 7px;
+      color: #92989b;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.055em;
+      text-transform: uppercase;
+    }
+    .group-context-item p { margin: 0; font-size: 0.8rem; line-height: 1.55; }
     .outcomes {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -733,6 +751,10 @@
       .work-grid { grid-template-columns: repeat(2, 1fr); }
       .case-study.featured { grid-column: 1 / -1; min-height: 480px; }
       .case-study.wide { grid-column: 1 / -1; }
+      .group-context { grid-template-columns: repeat(2, 1fr); }
+      .group-context-item { padding: 16px; }
+      .group-context-item + .group-context-item { border-top: 0; border-left: 1px solid var(--dark-line); }
+      .group-context-item.brands { grid-column: 1 / -1; border-top: 1px solid var(--dark-line); border-left: 0; }
       .career-item { grid-template-columns: 126px minmax(190px, 0.8fr) 1.2fr; gap: 24px; align-items: start; }
       .capability-grid { grid-template-columns: repeat(2, 1fr); }
       .capability { padding: 30px; border-right: 1px solid var(--line); }
@@ -962,9 +984,25 @@
             <div>
               <div class="case-meta"><span>Podiem · SalesPond Group</span><span class="case-number">Case / 01</span></div>
               <h3>Turning a sales operation into a dependable product system.</h3>
-              <p>Leading full-stack product development for Podiem, a sales engagement platform combining campaigns, multi-channel outreach, telephony, lead qualification, CRM integrations, gamification, and reporting.</p>
+              <p>Leading full-stack product development for Podiem, SalesPond Group’s sales engagement platform combining campaigns, multi-channel outreach, telephony, lead qualification, CRM integrations, gamification, and reporting.</p>
+              <div class="group-context" aria-label="SalesPond Group profile">
+                <div class="group-context-item">
+                  <span class="group-context-label">Group footprint</span>
+                  <p>Founded in Sydney in 2013, with eight direct APAC locations and campaign coverage across Asia Pacific, North America, and EMEA.</p>
+                </div>
+                <div class="group-context-item">
+                  <span class="group-context-label">Services</span>
+                  <p>Five specialist businesses spanning human-verified data, outbound sales, sales engagement software, market-entry investment, and events.</p>
+                </div>
+                <div class="group-context-item brands">
+                  <span class="group-context-label">Featured brands</span>
+                  <p>Google Cloud, Stripe, HPE, Lenovo, TikTok, Okta, Zendesk, and HubSpot are among the brands publicly featured by the group.</p>
+                </div>
+              </div>
             </div>
-            <div class="outcomes" aria-label="Podiem outcomes">
+            <div class="outcomes" aria-label="Podiem scale and engineering outcomes">
+              <div class="outcome"><strong>20K+</strong><span>qualified leads informing product evolution</span></div>
+              <div class="outcome"><strong>Millions</strong><span>of outreach activities shaping workflows</span></div>
               <div class="outcome"><strong>50–60%</strong><span>lower monthly cloud infrastructure cost</span></div>
               <div class="outcome"><strong>Multiple / day</strong><span>production deployments</span></div>
               <div class="outcome"><strong>&lt; 2 hours</strong><span>service restoration target achieved</span></div>
