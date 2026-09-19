@@ -48,6 +48,25 @@
       "https://bio.link/yohangdev"
     ],
     "knowsAbout": [
+      "Full-Stack Development",
+      "Back-End Web Development",
+      "Front-end Development",
+      "Software Architecture",
+      "Software Development",
+      "Programming",
+      "Database Design",
+      "DevOps",
+      "Cloud Computing",
+      "Infrastructure as a Service (IaaS)",
+      "Platform as a Service (PaaS)",
+      "Infrastructure as code (IaC)",
+      "Platform Engineering",
+      "System Administration",
+      "Continuous Integration and Continuous Delivery (CI/CD)",
+      "Agile Methodologies",
+      "Agile Leadership",
+      "Software as a Service (SaaS)",
+      "Customer Relationship Management (CRM)",
       "Full-stack development",
       "SaaS product engineering",
       "Cloud-native architecture",
@@ -683,6 +702,44 @@
     .career-role p { margin-bottom: 0; color: var(--muted); font-size: 0.9rem; }
     .career-summary { color: #4f4f4f; font-size: 0.92rem; }
 
+    .skill-groups {
+      display: grid;
+      border-top: 1px solid var(--line-strong);
+    }
+    .skill-group {
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .skill-group-index {
+      display: block;
+      margin-bottom: 34px;
+      color: var(--accent);
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .skill-group h3 {
+      margin-bottom: 18px;
+      font-size: 1.24rem;
+      letter-spacing: -0.025em;
+    }
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .skill-list li {
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.35;
+    }
+
     .capability-grid { display: grid; border-top: 1px solid var(--line-strong); }
     .capability {
       padding: 26px 0;
@@ -829,6 +886,9 @@
       .group-context-item + .group-context-item { border-top: 0; border-left: 1px solid var(--dark-line); }
       .group-context-item.brands { grid-column: 1 / -1; border-top: 1px solid var(--dark-line); border-left: 0; }
       .career-item { grid-template-columns: 126px minmax(190px, 0.8fr) 1.2fr; gap: 24px; align-items: start; }
+      .skill-groups { grid-template-columns: repeat(3, 1fr); }
+      .skill-group { min-height: 330px; padding: 30px; border-right: 1px solid var(--line); }
+      .skill-group:last-child { border-right: 0; }
       .capability-grid { grid-template-columns: repeat(2, 1fr); }
       .capability { padding: 30px; border-right: 1px solid var(--line); }
       .capability:nth-child(2n) { border-right: 0; }
@@ -909,6 +969,7 @@
         <a href="#problems">Problems</a>
         <a href="#work">Work</a>
         <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
         <a href="#capabilities">Capabilities</a>
         <a href="#recommendations">Recommendations</a>
       </nav>
@@ -1231,6 +1292,60 @@
             <div class="career-date">Jun 2011 — Dec 2013</div>
             <div class="career-role"><h3>Web Developer</h3><p>PT Gamatechno Indonesia</p></div>
             <div class="career-summary">Built web applications and system integrations for universities and utility-sector organisations across Indonesia.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-label">Skills</p>
+            <h2 class="section-title" id="skills-title">The skills behind the systems.</h2>
+          </div>
+          <p class="section-lead">Selected from my LinkedIn skills and experience history, then grouped around the way I apply them across product, platform, and people.</p>
+        </div>
+
+        <div class="skill-groups">
+          <article class="skill-group">
+            <span class="skill-group-index">01 / Build</span>
+            <h3>Product engineering</h3>
+            <ul class="skill-list" aria-label="Product engineering skills">
+              <li>Full-Stack Development</li>
+              <li>Back-End Web Development</li>
+              <li>Front-end Development</li>
+              <li>Programming</li>
+              <li>Software Development</li>
+              <li>Software Architecture</li>
+              <li>Database Design</li>
+            </ul>
+          </article>
+
+          <article class="skill-group">
+            <span class="skill-group-index">02 / Run</span>
+            <h3>Platform &amp; delivery</h3>
+            <ul class="skill-list" aria-label="Platform and delivery skills">
+              <li>DevOps</li>
+              <li>Cloud Computing</li>
+              <li>Infrastructure as a Service (IaaS)</li>
+              <li>Platform as a Service (PaaS)</li>
+              <li>Infrastructure as code (IaC)</li>
+              <li>Platform Engineering</li>
+              <li>System Administration</li>
+              <li>Continuous Integration and Continuous Delivery (CI/CD)</li>
+            </ul>
+          </article>
+
+          <article class="skill-group">
+            <span class="skill-group-index">03 / Lead</span>
+            <h3>Product &amp; leadership</h3>
+            <ul class="skill-list" aria-label="Product and leadership skills">
+              <li>Agile Methodologies</li>
+              <li>Agile Leadership</li>
+              <li>Software as a Service (SaaS)</li>
+              <li>Customer Relationship Management (CRM)</li>
+            </ul>
           </article>
         </div>
       </div>

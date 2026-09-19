@@ -4,7 +4,7 @@
 
 ## Website
 
-- [The Full Stack Developer](https://thefullstackdev.com/): Personal portfolio covering client challenges, selected work, experience, capabilities, recommendations, and contact information.
+- [The Full Stack Developer](https://thefullstackdev.com/): Personal portfolio covering client challenges, selected work, experience, skills, capabilities, recommendations, and contact information.
 
 ## Main sections
 
@@ -12,6 +12,7 @@
 - [Problems I love to solve](https://thefullstackdev.com/#problems): Lean team design, MVP and minimum sellable product definition, capacity planning, delivery flow, engineering visibility, and cloud cost optimisation.
 - [Selected work](https://thefullstackdev.com/#work): Case studies covering sales operations, public infrastructure, public-sector platforms, and public services.
 - [Experience](https://thefullstackdev.com/#experience): Career history from web development to product and engineering leadership.
+- [Skills](https://thefullstackdev.com/#skills): Product engineering, platform and delivery, and product leadership skills, including full-stack development, backend and frontend development, software architecture, databases, DevOps, cloud computing, IaaS, PaaS, infrastructure as code, platform engineering, system administration, CI/CD, Agile methodologies, Agile leadership, SaaS, and CRM.
 - [Capabilities](https://thefullstackdev.com/#capabilities): Full-stack engineering, cloud and delivery, reliability, and engineering leadership.
 - [Recommendations](https://thefullstackdev.com/#recommendations): Professional recommendations from colleagues and collaborators.
 
