@@ -27,7 +27,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111111'/%3E%3Cpath d='M14 17h9l9 14 9-14h9L36 38v10h-8V38L14 17Z' fill='white'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -82,7 +82,7 @@
       --radius-lg: 22px;
       --shadow: 0 18px 60px rgba(17, 18, 18, 0.08);
       --sans: "Public Sans", Arial, sans-serif;
-      --mono: "IBM Plex Mono", ui-monospace, monospace;
+      /* --mono: "IBM Plex Mono", ui-monospace, monospace; Reserved for future code UI. */
       --max: 1180px;
     }
 
@@ -168,7 +168,7 @@
 
     .brand-domain {
       color: var(--muted);
-      font-family: var(--mono);
+      font-family: var(--sans);
       font-size: 0.59rem;
       font-weight: 500;
       letter-spacing: 0.025em;
@@ -182,7 +182,7 @@
       border-radius: 8px;
       background: var(--ink);
       color: #fff;
-      font-family: var(--mono);
+      font-family: var(--sans);
       font-size: 0.72rem;
       font-weight: 500;
       letter-spacing: -0.06em;
@@ -276,7 +276,7 @@
       gap: 10px;
       margin: 0 0 22px;
       color: var(--muted);
-      font-family: var(--mono);
+      font-family: var(--sans);
       font-size: 0.76rem;
       font-weight: 500;
       letter-spacing: 0.08em;
@@ -294,7 +294,7 @@
     }
     .hero-focus-label {
       color: var(--muted);
-      font-family: var(--mono);
+      font-family: var(--sans);
       font-size: 0.7rem;
       font-weight: 500;
       letter-spacing: 0.08em;
@@ -367,7 +367,7 @@
       padding-bottom: 17px;
       border-bottom: 1px solid var(--dark-line);
       color: #aeb3b6;
-      font-family: var(--mono);
+      font-family: var(--sans);
       font-size: 0.72rem;
       letter-spacing: 0.05em;
       text-transform: uppercase;
@@ -419,7 +419,7 @@
     .profile-role {
       display: block;
       color: #aeb3b6;
-      font-family: var(--mono);
+      font-family: var(--sans);
       font-size: 0.65rem;
       letter-spacing: 0.045em;
       line-height: 1.45;
@@ -437,7 +437,7 @@
     .signal-index,
     .signal-note {
       color: #aeb3b6;
-      font-family: var(--mono);
+      font-family: var(--sans);
       font-size: 0.68rem;
       text-transform: uppercase;
     }
@@ -452,7 +452,7 @@
       font-size: 0.82rem;
     }
     .panel-foot strong { display: block; color: #fff; font-size: 0.92rem; }
-    .coordinate { font-family: var(--mono); font-size: 0.68rem; text-align: right; }
+    .coordinate { font-family: var(--sans); font-size: 0.68rem; text-align: right; }
 
     .metric-strip {
       margin-bottom: 86px;
@@ -513,7 +513,7 @@
       padding: 18px 0;
       border-bottom: 1px solid var(--line);
     }
-    .principle span { font-family: var(--mono); color: var(--accent); font-size: 0.75rem; }
+    .principle span { font-family: var(--sans); color: var(--accent); font-size: 0.75rem; }
     .principle strong { display: block; margin-bottom: 4px; font-size: 0.98rem; }
     .principle p { margin: 0; color: var(--muted); font-size: 0.88rem; line-height: 1.5; }
 
@@ -557,7 +557,7 @@
       display: block;
       margin-bottom: 34px;
       color: var(--accent-on-dark);
-      font-family: var(--mono);
+      font-family: var(--sans);
       font-size: 0.7rem;
       letter-spacing: 0.045em;
       text-transform: uppercase;
@@ -614,7 +614,7 @@
       justify-content: space-between;
       gap: 10px;
       margin-bottom: 54px;
-      font-family: var(--mono);
+      font-family: var(--sans);
       color: var(--muted);
       font-size: 0.7rem;
       letter-spacing: 0.04em;
@@ -644,7 +644,7 @@
       display: block;
       margin-bottom: 7px;
       /*color: #aeb3b6;*/
-      font-family: var(--mono);
+      font-family: var(--sans);
       font-size: 0.75rem;
       font-weight: bold;
       letter-spacing: 0.055em;
@@ -680,7 +680,7 @@
       border-bottom: 1px solid var(--line);
     }
     .career-date {
-      font-family: var(--mono);
+      font-family: var(--sans);
       color: var(--muted);
       font-size: 0.72rem;
       letter-spacing: 0.03em;
@@ -695,7 +695,7 @@
       padding: 26px 0;
       border-bottom: 1px solid var(--line);
     }
-    .capability-index { display: block; margin-bottom: 34px; color: var(--accent); font-family: var(--mono); font-size: 0.72rem; }
+    .capability-index { display: block; margin-bottom: 34px; color: var(--accent); font-family: var(--sans); font-size: 0.72rem; }
     .capability h3 { margin-bottom: 14px; font-size: 1.24rem; letter-spacing: -0.025em; }
     .capability ul { margin: 0; padding: 0; list-style: none; color: var(--muted); font-size: 0.9rem; }
     .capability li { padding: 5px 0; }
@@ -716,7 +716,7 @@
     .recommendation:last-child { border-bottom: 0; }
     .quote-mark {
       color: var(--accent);
-      font-family: var(--mono);
+      font-family: var(--sans);
       font-size: 0.75rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -742,7 +742,7 @@
     .recommendation-person span { display: block; color: var(--muted); font-size: 0.78rem; line-height: 1.45; }
     .recommendation-person a {
       color: var(--muted);
-      font-family: var(--mono);
+      font-family: var(--sans);
       font-size: 0.68rem;
       white-space: nowrap;
     }
@@ -770,7 +770,7 @@
       transition: padding-left 160ms ease, color 160ms ease;
     }
     .profile-link:hover { padding-left: 8px; color: var(--accent); }
-    .profile-link small { display: block; color: var(--muted); font-family: var(--mono); font-size: 0.67rem; font-weight: 400; }
+    .profile-link small { display: block; color: var(--muted); font-family: var(--sans); font-size: 0.67rem; font-weight: 400; }
     .profile-link svg { width: 18px; height: 18px; }
 
     .contact { padding: 86px 0 24px; }
@@ -814,7 +814,7 @@
       gap: 8px;
       padding: 26px 0 10px;
       color: var(--muted);
-      font-family: var(--mono);
+      font-family: var(--sans);
       font-size: 0.7rem;
     }
     .site-footer a:hover { color: var(--ink); }
