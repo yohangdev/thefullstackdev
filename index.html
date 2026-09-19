@@ -64,12 +64,13 @@
 
   <style>
     :root {
-      --paper: #f7f7f5;
+      color-scheme: light;
+      --paper: #ffffff;
       --surface: #ffffff;
       --ink: #111212;
       --muted: #666966;
-      --line: #dedfda;
-      --line-strong: #c5c7c1;
+      --line: #d8dad5;
+      --line-strong: #bcc0b9;
       --accent: #2457ff;
       --accent-soft: #eef2ff;
       --dark: #111315;
@@ -132,8 +133,8 @@
       top: 0;
       z-index: 40;
       padding: 12px 0;
-      background: rgba(247, 247, 245, 0.9);
-      border-bottom: 1px solid rgba(222, 223, 218, 0.7);
+      background: rgba(255, 255, 255, 0.9);
+      border-bottom: 1px solid rgba(216, 218, 213, 0.7);
       backdrop-filter: blur(16px);
     }
 
@@ -267,19 +268,6 @@
       padding: clamp(26px, 6vw, 58px);
       background: var(--surface);
     }
-    .hero-copy::after {
-      content: "";
-      position: absolute;
-      right: -110px;
-      bottom: -110px;
-      width: 260px;
-      height: 260px;
-      border: 1px solid var(--line);
-      border-radius: 50%;
-      box-shadow: 0 0 0 40px var(--paper), 0 0 0 41px var(--line);
-      pointer-events: none;
-    }
-
     .eyebrow,
     .section-label {
       display: flex;
@@ -616,7 +604,7 @@
       border-color: var(--dark);
     }
     .case-study.wide {
-      background: linear-gradient(135deg, var(--surface) 0%, #f3f5ff 100%);
+      background: var(--surface);
     }
     .case-meta {
       display: flex;
