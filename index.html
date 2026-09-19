@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#f7f7f5">
 
   <title>Yoga Hanggara — Lead Full Stack Developer</title>
-  <meta name="description" content="Yoga Hanggara is a Lead Full Stack Developer in Bandung, Indonesia, building reliable SaaS products, cloud-native platforms, and high-performing engineering teams.">
+  <meta name="description" content="Yoga Hanggara helps teams shape MVPs, build lean engineering capability, improve delivery and observability, and reduce cloud infrastructure cost.">
   <meta name="author" content="Yoga Hanggara">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://thefullstackdev.com/">
@@ -15,14 +15,14 @@
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="Yoga Hanggara">
   <meta property="og:title" content="Yoga Hanggara — Lead Full Stack Developer">
-  <meta property="og:description" content="Building reliable SaaS products, cloud-native platforms, and high-performing engineering teams.">
+  <meta property="og:description" content="Helping teams shape MVPs, build lean engineering capability, improve delivery and observability, and reduce cloud infrastructure cost.">
   <meta property="og:url" content="https://thefullstackdev.com/">
   <meta property="og:locale" content="en_US">
   <meta property="profile:first_name" content="Yoga">
   <meta property="profile:last_name" content="Hanggara">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Yoga Hanggara — Lead Full Stack Developer">
-  <meta name="twitter:description" content="Building reliable SaaS products, cloud-native platforms, and high-performing engineering teams.">
+  <meta name="twitter:description" content="Helping teams shape MVPs, build lean engineering capability, improve delivery and observability, and reduce cloud infrastructure cost.">
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111111'/%3E%3Cpath d='M14 17h9l9 14 9-14h9L36 38v10h-8V38L14 17Z' fill='white'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,6 +53,10 @@
       "Cloud-native architecture",
       "DevOps",
       "Engineering leadership",
+      "Lean product delivery",
+      "Team capacity planning",
+      "Engineering observability",
+      "Cloud cost optimisation",
       "AI-assisted software development"
     ]
   }
@@ -508,6 +512,75 @@
     .principle strong { display: block; margin-bottom: 4px; font-size: 0.98rem; }
     .principle p { margin: 0; color: var(--muted); font-size: 0.88rem; line-height: 1.5; }
 
+    .problem-shell {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(26px, 5vw, 56px);
+      border-radius: var(--radius-lg);
+      background: var(--dark);
+      color: #fff;
+    }
+    .problem-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.25;
+      background-image:
+        linear-gradient(var(--dark-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--dark-line) 1px, transparent 1px);
+      background-size: 54px 54px;
+      mask-image: linear-gradient(135deg, #000, transparent 68%);
+      pointer-events: none;
+    }
+    .problem-head,
+    .problem-grid,
+    .problem-foot { position: relative; z-index: 1; }
+    .problem-head {
+      display: grid;
+      gap: 18px;
+      margin-bottom: 48px;
+    }
+    .problem-head .section-label { color: #979d9f; }
+    .problem-head .section-title { color: #fff; }
+    .problem-head .section-lead { color: #b8bcbd; }
+    .problem-grid { display: grid; border-top: 1px solid var(--dark-line); }
+    .problem-card {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--dark-line);
+    }
+    .problem-index {
+      display: block;
+      margin-bottom: 34px;
+      color: #849cff;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.045em;
+      text-transform: uppercase;
+    }
+    .problem-card h3 {
+      max-width: 340px;
+      margin-bottom: 14px;
+      font-size: clamp(1.28rem, 3vw, 1.72rem);
+      line-height: 1.14;
+      letter-spacing: -0.035em;
+    }
+    .problem-signal {
+      margin-bottom: 12px;
+      color: #fff;
+      font-size: 0.87rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+    .problem-response { margin-bottom: 0; color: #9fa4a7; font-size: 0.86rem; line-height: 1.6; }
+    .problem-foot {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+      padding-top: 30px;
+    }
+    .problem-foot p { max-width: 660px; margin: 0; color: #b8bcbd; font-size: 0.94rem; }
+
     .work-grid { display: grid; gap: 16px; }
     .case-study {
       position: relative;
@@ -748,6 +821,12 @@
       .section-head { grid-template-columns: 1.25fr 0.75fr; align-items: end; }
       .section-lead { justify-self: end; }
       .about-grid { grid-template-columns: 1.3fr 0.7fr; align-items: start; }
+      .problem-head { grid-template-columns: 1.25fr 0.75fr; align-items: end; }
+      .problem-head .section-lead { justify-self: end; }
+      .problem-grid { grid-template-columns: repeat(2, 1fr); }
+      .problem-card { padding: 32px; border-right: 1px solid var(--dark-line); }
+      .problem-card:nth-child(2n) { border-right: 0; }
+      .problem-foot { flex-direction: row; align-items: center; justify-content: space-between; }
       .work-grid { grid-template-columns: repeat(2, 1fr); }
       .case-study.featured { grid-column: 1 / -1; min-height: 480px; }
       .case-study.wide { grid-column: 1 / -1; }
@@ -792,6 +871,10 @@
       .profile-intro { margin-bottom: 34px; }
       .metric-strip { margin-bottom: 112px; }
       .section { padding: 102px 0; }
+      .problem-grid { grid-template-columns: repeat(3, 1fr); }
+      .problem-card { min-height: 350px; }
+      .problem-card:nth-child(2n) { border-right: 1px solid var(--dark-line); }
+      .problem-card:nth-child(3n) { border-right: 0; }
       .case-study.featured { grid-column: auto; grid-row: span 2; min-height: 100%; }
       .case-study:not(.featured) { min-height: 390px; }
       .case-study.wide {
@@ -831,7 +914,8 @@
 
       <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
         <a href="#about">About</a>
-        <a href="#work">Selected work</a>
+        <a href="#problems">Problems</a>
+        <a href="#work">Work</a>
         <a href="#experience">Experience</a>
         <a href="#capabilities">Capabilities</a>
         <a href="#recommendations">Recommendations</a>
@@ -856,14 +940,14 @@
           <div>
             <p class="eyebrow">Lead Full Stack Developer · Bandung, Indonesia</p>
             <h1 id="hero-title">Build the right thing. <span class="accent">Build it right.</span></h1>
-            <p class="hero-intro">I build and lead the systems behind SaaS products, public services, and high-performing engineering teams—from product architecture to the path into production.</p>
+            <p class="hero-intro">I help teams turn uncertain product ideas into focused, reliable software—with the right capabilities, a lean path to production, and evidence to guide what comes next.</p>
           </div>
           <div class="hero-actions">
-            <a class="button" href="#work">
-              Explore selected work
+            <a class="button" href="#problems">
+              See where I help
               <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a class="button secondary" href="https://github.com/yohangdev" target="_blank" rel="me noreferrer">GitHub</a>
+            <a class="button secondary" href="#work">Explore selected work</a>
           </div>
         </div>
 
@@ -964,6 +1048,72 @@
               <span>03</span>
               <div><strong>Improve the path</strong><p>Make delivery repeatable, reviewable, and safe for a small team.</p></div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="problems" aria-labelledby="problems-title">
+      <div class="container">
+        <div class="problem-shell">
+          <div class="problem-head">
+            <div>
+              <p class="section-label">Problems I love to solve</p>
+              <h2 class="section-title" id="problems-title">Better outcomes rarely start with a bigger team.</h2>
+            </div>
+            <p class="section-lead">They start with a clearer product bet, the right capabilities, and enough visibility to improve with confidence. If these situations feel familiar, I can help.</p>
+          </div>
+
+          <div class="problem-grid">
+            <article class="problem-card">
+              <span class="problem-index">01 / Team design</span>
+              <h3>Start lean. Add capacity with intent.</h3>
+              <p class="problem-signal">You need to build a team, but are unsure which roles you actually need.</p>
+              <p class="problem-response">Start with a small group of complementary capabilities and clear ownership. Grow only when the work reveals a real constraint—not because a generic org chart says so.</p>
+            </article>
+
+            <article class="problem-card">
+              <span class="problem-index">02 / Product definition</span>
+              <h3>Find the smallest product worth shipping.</h3>
+              <p class="problem-signal">A promising idea is becoming an oversized, slow-moving first release.</p>
+              <p class="problem-response">Shape an MVP to test the riskiest assumptions—or an MSP, minimum sellable product, that delivers a complete customer outcome people will pay for.</p>
+            </article>
+
+            <article class="problem-card">
+              <span class="problem-index">03 / Capacity</span>
+              <h3>Make priorities fit real capacity.</h3>
+              <p class="problem-signal">Everything feels urgent, ownership is blurred, and delivery dates keep moving.</p>
+              <p class="problem-response">Make demand, capacity, dependencies, and trade-offs visible so the team can commit realistically without sacrificing maintenance or reliability.</p>
+            </article>
+
+            <article class="problem-card">
+              <span class="problem-index">04 / Delivery flow</span>
+              <h3>Replace process drag with fast feedback.</h3>
+              <p class="problem-signal">Releases are slow or risky, while meetings and hand-offs keep multiplying.</p>
+              <p class="problem-response">Use smaller batches, lightweight planning, automation, and short learning loops to make progress steady, reviewable, and safe.</p>
+            </article>
+
+            <article class="problem-card">
+              <span class="problem-index">05 / Visibility</span>
+              <h3>See where engineering effort goes.</h3>
+              <p class="problem-signal">Leaders cannot tell what slows delivery, hurts reliability, or creates customer friction.</p>
+              <p class="problem-response">Connect delivery, quality, product signals, and system observability so decisions come from evidence instead of status updates and intuition.</p>
+            </article>
+
+            <article class="problem-card">
+              <span class="problem-index">06 / Cost &amp; scale</span>
+              <h3>Make infrastructure spend earn its keep.</h3>
+              <p class="problem-signal">Cloud cost is rising faster than traffic, revenue, or customer value.</p>
+              <p class="problem-response">Trace cost to actual workloads, remove waste, right-size the architecture, and protect the reliability and headroom the product genuinely needs.</p>
+            </article>
+          </div>
+
+          <div class="problem-foot">
+            <p>The goal is not transformation theatre. It is a team that can learn faster, ship useful software, and operate it responsibly as demand grows.</p>
+            <a class="button light" href="#work">
+              See the outcomes
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
         </div>
       </div>
@@ -1226,8 +1376,8 @@
       <div class="container">
         <div class="contact-card">
           <p class="section-label">Let’s connect</p>
-          <h2 id="contact-title">Building something that needs to work in the real world?</h2>
-          <p>I’m always interested in thoughtful conversations about SaaS product engineering, cloud-native systems, reliable delivery, and better ways for engineering teams to work.</p>
+          <h2 id="contact-title">A product to shape, a team to focus, or a system to improve?</h2>
+          <p>Tell me where the uncertainty or friction is. I’m always interested in thoughtful conversations about turning product, engineering, and operating challenges into a practical next move.</p>
           <div class="contact-actions">
             <a class="button light" href="https://www.linkedin.com/in/yoga-hanggara/" target="_blank" rel="me noreferrer">
               Connect on LinkedIn

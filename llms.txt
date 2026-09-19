@@ -1,14 +1,15 @@
 # Yoga Hanggara — Lead Full Stack Developer
 
-> Yoga Hanggara is a Lead Full Stack Developer in Bandung, Indonesia, building reliable SaaS products, cloud-native platforms, and high-performing engineering teams.
+> Yoga Hanggara is a Lead Full Stack Developer in Bandung, Indonesia, helping teams shape MVPs, build lean engineering capability, improve delivery and observability, and reduce cloud infrastructure cost.
 
 ## Website
 
-- [The Full Stack Developer](https://thefullstackdev.com/): Personal portfolio, work, experience, capabilities, recommendations, and contact information.
+- [The Full Stack Developer](https://thefullstackdev.com/): Personal portfolio covering client challenges, selected work, experience, capabilities, recommendations, and contact information.
 
 ## Main sections
 
 - [About](https://thefullstackdev.com/#about): Engineering approach and focus on the whole product system.
+- [Problems I love to solve](https://thefullstackdev.com/#problems): Lean team design, MVP and minimum sellable product definition, capacity planning, delivery flow, engineering visibility, and cloud cost optimisation.
 - [Selected work](https://thefullstackdev.com/#work): Case studies covering sales operations, public infrastructure, public-sector platforms, and public services.
 - [Experience](https://thefullstackdev.com/#experience): Career history from web development to product and engineering leadership.
 - [Capabilities](https://thefullstackdev.com/#capabilities): Full-stack engineering, cloud and delivery, reliability, and engineering leadership.
