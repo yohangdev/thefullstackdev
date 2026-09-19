@@ -15,6 +15,20 @@ Key features include:
 - Open Graph, X/Twitter, canonical, and structured-data metadata
 - Public Sans and IBM Plex Mono typography
 
+## Build
+
+Generate the deployable site in `dist/`. The build keeps the HTML structure and metadata intact while minifying the inline CSS and JavaScript, then copies `robots.txt` and `llms.txt`:
+
+```sh
+python3 build.py
+```
+
+The output directory can be changed when needed:
+
+```sh
+python3 build.py --output-dir /path/to/output
+```
+
 ## Run Locally
 
 Start a static file server from the repository root:
@@ -25,7 +39,7 @@ python3 -m http.server 4173
 
 Then open [http://127.0.0.1:4173/](http://127.0.0.1:4173/).
 
-No package installation or build command is required.
+No package installation is required.
 
 ## Deploy
 
@@ -33,8 +47,8 @@ The repository is designed for Cloudflare Pages:
 
 1. Connect this GitHub repository to a Cloudflare Pages project.
 2. Select the static HTML or no-framework preset.
-3. Leave the build command empty.
-4. Set the output directory to the repository root.
+3. Set the build command to `python3 build.py`.
+4. Set the output directory to `dist`.
 
 The custom domain is expected to be `thefullstackdev.com`.
 

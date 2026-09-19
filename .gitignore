@@ -5,3 +5,6 @@
 Thumbs.db
 
 *.zip
+
+# Build output
+/dist/
