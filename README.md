@@ -4,7 +4,7 @@ Personal website for [Yoga Hanggara](https://www.linkedin.com/in/yoga-hanggara/)
 
 ## Overview
 
-The site is a lightweight, mobile-first static page built without frameworks or build dependencies. HTML, CSS, JavaScript, SEO metadata, JSON-LD, and the favicon are all contained in [`index.html`](./index.html).
+The site is a lightweight, mobile-first static page built without frameworks or build dependencies. The main page’s HTML, CSS, JavaScript, SEO metadata, JSON-LD, and favicon are contained in [`index.html`](./index.html), with a standalone [`404.html`](./404.html) for invalid paths.
 
 Key features include:
 
@@ -70,7 +70,7 @@ Avoid introducing tinted grays, colored gradients, or additional accent colors w
 
 ## Build
 
-Generate the deployable site in `dist/`. The build keeps the HTML structure and metadata intact while minifying the inline CSS and JavaScript, then copies `robots.txt` and `llms.txt`:
+Generate the deployable site in `dist/`. The build keeps the HTML structure and metadata intact while minifying the inline CSS and JavaScript, then copies `404.html`, `robots.txt`, and `llms.txt`:
 
 ```sh
 python3 build.py
