@@ -77,9 +77,6 @@
       --dark: #111111;
       --dark-soft: #1a1a1a;
       --dark-line: #2d2d2d;
-      --radius-sm: 8px;
-      --radius-md: 14px;
-      --radius-lg: 22px;
       --shadow: 0 18px 60px rgba(17, 17, 17, 0.08);
       --sans: "Public Sans", Arial, sans-serif;
       /* --mono: "IBM Plex Mono", ui-monospace, monospace; Reserved for future code UI. */
@@ -111,7 +108,6 @@
       left: 10px;
       z-index: 100;
       padding: 10px 14px;
-      border-radius: var(--radius-sm);
       background: var(--ink);
       color: #fff;
       transform: translateY(-150%);
@@ -179,7 +175,6 @@
       height: 30px;
       display: grid;
       place-items: center;
-      border-radius: 8px;
       background: var(--ink);
       color: #fff;
       font-family: var(--sans);
@@ -194,7 +189,6 @@
       display: grid;
       place-items: center;
       border: 1px solid var(--line);
-      border-radius: 10px;
       background: var(--surface);
       color: var(--ink);
       cursor: pointer;
@@ -210,7 +204,6 @@
       display: none;
       padding: 12px;
       border: 1px solid #d9d9d9;
-      border-radius: var(--radius-md);
       background: var(--surface);
       box-shadow: var(--shadow);
     }
@@ -220,7 +213,6 @@
       display: flex;
       align-items: center;
       padding: 0 14px;
-      border-radius: 8px;
       color: var(--muted);
       font-size: 0.9rem;
       font-weight: 600;
@@ -238,7 +230,6 @@
       gap: 10px;
       padding: 0 18px;
       border: 1px solid var(--ink);
-      border-radius: var(--radius-sm);
       background: var(--ink);
       color: #fff;
       font-size: 0.9rem;
@@ -258,7 +249,6 @@
     .hero-copy,
     .hero-panel {
       border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
       overflow: hidden;
     }
     .hero-copy {
@@ -376,7 +366,6 @@
     .status-dot {
       width: 8px;
       height: 8px;
-      border-radius: 50%;
       background: #73e3a0;
       box-shadow: 0 0 0 4px rgba(115, 227, 160, 0.12);
     }
@@ -399,7 +388,6 @@
       flex: 0 0 auto;
       overflow: hidden;
       border: 1px solid #4a4a4a;
-      border-radius: 16px;
       box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
     }
     .profile-photo {
@@ -459,7 +447,6 @@
       grid-template-columns: 1fr 1fr;
       background: var(--ink);
       color: #fff;
-      border-radius: var(--radius-md);
       overflow: hidden;
     }
     .metric {
@@ -520,7 +507,6 @@
       position: relative;
       overflow: hidden;
       padding: clamp(26px, 5vw, 56px);
-      border-radius: var(--radius-lg);
       background: var(--dark);
       color: #fff;
     }
@@ -594,7 +580,6 @@
       justify-content: space-between;
       padding: clamp(24px, 4vw, 36px);
       border: 1px solid var(--line);
-      border-radius: var(--radius-md);
       background: var(--surface);
       overflow: hidden;
     }
@@ -752,7 +737,6 @@
       gap: 24px;
       padding: clamp(26px, 5vw, 54px);
       border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
       background: var(--surface);
     }
     .community-copy h2 { max-width: 640px; }
@@ -777,21 +761,8 @@
       position: relative;
       overflow: hidden;
       padding: clamp(30px, 7vw, 76px);
-      border-radius: var(--radius-lg);
       background: var(--dark);
       color: #fff;
-    }
-    .contact-card::after {
-      content: "";
-      position: absolute;
-      right: -100px;
-      bottom: -100px;
-      width: 300px;
-      height: 300px;
-      border: 1px solid #343434;
-      border-radius: 50%;
-      box-shadow: 0 0 0 50px var(--dark), 0 0 0 51px #343434;
-      pointer-events: none;
     }
     .contact-card .section-label { color: #aeaeae; }
     .contact-card h2 {
@@ -861,7 +832,6 @@
         gap: 2px;
         padding: 5px;
         border: 1px solid #d9d9d9;
-        border-radius: 12px;
         box-shadow: none;
         background: rgba(255, 255, 255, 0.72);
       }
