@@ -251,11 +251,10 @@
     .button.light:hover { background: #ebede8; }
     .button svg { width: 16px; height: 16px; flex: 0 0 auto; }
 
-    .hero { padding: 38px 0 22px; }
+    .hero { padding: 32px 0 22px; }
     .hero-grid { display: grid; gap: 16px; }
     .hero-copy,
     .hero-panel {
-      min-height: 480px;
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
       overflow: hidden;
@@ -295,6 +294,31 @@
       line-height: 1.4;
       text-transform: uppercase;
     }
+
+    .hero-focus {
+      display: grid;
+      gap: 7px;
+      margin: 0 0 26px;
+      padding: 16px 0 17px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-focus-label {
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+    .hero-focus-text {
+      color: var(--accent);
+      font-size: clamp(1.35rem, 3vw, 2.15rem);
+      font-weight: 600;
+      letter-spacing: -0.045em;
+      line-height: 1.05;
+    }
     .eyebrow::before,
     .section-label::before {
       content: "";
@@ -308,7 +332,7 @@
     h1 {
       max-width: 790px;
       margin-bottom: 24px;
-      font-size: clamp(2.6rem, 8.2vw, 5.6rem);
+      font-size: clamp(2.6rem, 8.2vw, 5rem);
       line-height: 0.98;
       letter-spacing: -0.065em;
       font-weight: 600;
@@ -325,6 +349,8 @@
 
     .hero-panel {
       position: relative;
+      display: flex;
+      flex-direction: column;
       padding: 24px;
       background: var(--dark);
       color: #fff;
@@ -349,7 +375,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 14px;
-      padding-bottom: 22px;
+      padding-bottom: 17px;
       border-bottom: 1px solid var(--dark-line);
       color: #aeb3b6;
       font-family: var(--mono);
@@ -365,12 +391,18 @@
       background: #73e3a0;
       box-shadow: 0 0 0 4px rgba(115, 227, 160, 0.12);
     }
-    .panel-main { padding: 34px 0 28px; }
+    .panel-main {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      padding: 28px 0 24px;
+    }
     .profile-intro {
       display: flex;
       align-items: center;
       gap: 16px;
-      margin-bottom: 30px;
+      margin-bottom: 24px;
     }
     .profile-photo-frame {
       width: 78px;
@@ -404,29 +436,13 @@
       line-height: 1.45;
       text-transform: uppercase;
     }
-    .panel-kicker {
-      margin-bottom: 12px;
-      color: #959b9f;
-      font-family: var(--mono);
-      font-size: 0.74rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-    .panel-main h2 {
-      max-width: 470px;
-      margin-bottom: 28px;
-      font-size: clamp(1.9rem, 6vw, 3.5rem);
-      line-height: 1.03;
-      letter-spacing: -0.045em;
-      font-weight: 600;
-    }
     .signal-list { display: grid; gap: 0; border-top: 1px solid var(--dark-line); }
     .signal {
       display: grid;
       grid-template-columns: 44px 1fr auto;
       gap: 12px;
       align-items: center;
-      padding: 15px 0;
+      padding: 13px 0;
       border-bottom: 1px solid var(--dark-line);
     }
     .signal-index,
@@ -442,7 +458,7 @@
       align-items: flex-end;
       justify-content: space-between;
       gap: 18px;
-      padding-top: 22px;
+      padding-top: 18px;
       color: #aeb3b6;
       font-size: 0.82rem;
     }
@@ -863,12 +879,11 @@
       .button.header-cta { display: inline-flex; min-height: 42px; }
       .hero { padding-top: 22px; }
       .hero-grid { grid-template-columns: minmax(0, 1.6fr) minmax(360px, 0.78fr); }
-      .hero-copy,
-      .hero-panel { min-height: 670px; }
       .hero-panel { padding: 30px; }
-      .panel-main { padding-top: 36px; }
-      .profile-photo-frame { width: 104px; height: 104px; }
-      .profile-intro { margin-bottom: 34px; }
+      .hero-copy h1 { font-size: clamp(3.2rem, 6.3vw, 5rem); }
+      .panel-main { padding-top: 28px; }
+      .profile-photo-frame { width: 84px; height: 84px; }
+      .profile-intro { margin-bottom: 24px; }
       .metric-strip { margin-bottom: 112px; }
       .section { padding: 102px 0; }
       .problem-grid { grid-template-columns: repeat(3, 1fr); }
@@ -939,6 +954,10 @@
         <div class="hero-copy">
           <div>
             <p class="eyebrow">Lead Full Stack Developer · Bandung, Indonesia</p>
+            <p class="hero-focus">
+              <span class="hero-focus-label">Operating across</span>
+              <span class="hero-focus-text">Product, platform &amp; people.</span>
+            </p>
             <h1 id="hero-title">Build the right thing. <span class="accent">Build it right.</span></h1>
             <p class="hero-intro">I help teams turn uncertain product ideas into focused, reliable software—with the right capabilities, a lean path to production, and evidence to guide what comes next.</p>
           </div>
@@ -966,8 +985,6 @@
                 <span class="profile-role">Lead Full Stack Developer<br>Bandung, Indonesia</span>
               </div>
             </div>
-            <p class="panel-kicker">Operating across</p>
-            <h2>Product, platform &amp; people.</h2>
             <div class="signal-list">
               <div class="signal">
                 <span class="signal-index">01</span>
