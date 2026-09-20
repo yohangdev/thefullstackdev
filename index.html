@@ -364,6 +364,35 @@
       min-width: 0;
     }
 
+    .hero-visual { display: none; }
+    .hero-visual svg {
+      width: 100%;
+      height: auto;
+      overflow: visible;
+    }
+    .hero-visual .process-route {
+      stroke-dasharray: 7 11;
+      animation: process-flow 12s linear infinite;
+    }
+    .hero-visual .process-label {
+      fill: #555;
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.11em;
+    }
+    .hero-visual .process-number {
+      fill: #9a9a9a;
+      font-family: var(--sans);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+    }
+
+    @keyframes process-flow {
+      to { stroke-dashoffset: -72; }
+    }
+
     .hero-profile {
       display: flex;
       align-items: center;
@@ -860,7 +889,31 @@
       .site-nav a { min-height: 34px; padding: 0 14px; font-size: 0.76rem; }
       .button.header-cta { display: inline-flex; min-height: 42px; }
       .hero { padding-top: 22px; }
+      .hero-grid {
+        grid-template-columns: minmax(0, 0.6fr) minmax(390px, 0.4fr);
+        grid-template-rows: 1fr auto;
+        align-items: stretch;
+      }
+      .hero-copy {
+        grid-column: 1;
+        grid-row: 1;
+        padding-right: 24px;
+      }
       .hero-copy h1 { font-size: clamp(3.2rem, 6.3vw, 5rem); }
+      .hero-visual {
+        position: relative;
+        z-index: 1;
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        display: grid;
+        align-items: center;
+        min-width: 0;
+        padding: 22px 18px 12px 0;
+      }
+      .hero-profile {
+        grid-column: 1;
+        grid-row: 2;
+      }
       .metric-strip-shell { margin-bottom: 112px; }
       .section { padding: 102px 0; }
       .problem-grid { grid-template-columns: repeat(3, 1fr); }
@@ -887,6 +940,7 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+      .hero-visual .process-route { animation: none; }
     }
   </style>
 </head>
@@ -941,6 +995,100 @@
             </a>
             <a class="button secondary" href="#work">Explore selected work</a>
           </div>
+        </div>
+
+        <div class="hero-visual">
+          <svg viewBox="0 0 620 520" role="img" aria-labelledby="process-title process-description">
+            <title id="process-title">A continuous lean experiment loop</title>
+            <desc id="process-description">Three connected isometric stations turn a hypothesis into a small experiment, then evidence that informs the next hypothesis.</desc>
+            <defs>
+              <marker id="process-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#565656"/>
+              </marker>
+            </defs>
+
+            <g fill="none" stroke="#d2d2d2" stroke-width="1" vector-effect="non-scaling-stroke" aria-hidden="true">
+              <path d="M62 343 310 486 558 343"/>
+              <path d="M100 321 310 442 520 321"/>
+              <path d="M139 299 310 398 481 299"/>
+              <path d="M177 277 310 354 443 277"/>
+              <path d="M62 343 310 200 558 343"/>
+              <path d="M100 365 310 244 520 365"/>
+              <path d="M139 387 310 288 481 387"/>
+              <path d="M177 409 310 332 443 409"/>
+            </g>
+
+            <g class="process-route" fill="none" stroke="#565656" stroke-width="1.5" marker-end="url(#process-arrow)" vector-effect="non-scaling-stroke" aria-hidden="true">
+              <path d="M220 151C283 99 395 105 446 158"/>
+              <path d="M492 217C522 285 462 365 383 399"/>
+              <path d="M285 420C183 420 109 347 125 255"/>
+              <path d="M135 213C149 181 171 158 204 148"/>
+            </g>
+
+            <g aria-hidden="true">
+              <ellipse cx="189" cy="236" rx="94" ry="22" fill="#111" opacity="0.06"/>
+              <path d="m101 187 88-51 88 51-88 51z" fill="#f7f7f7" stroke="#8c8c8c"/>
+              <path d="m101 187 88 51v22l-88-51z" fill="#d8d8d8" stroke="#8c8c8c"/>
+              <path d="m189 238 88-51v22l-88 51z" fill="#c4c4c4" stroke="#8c8c8c"/>
+              <path d="m142 178 47-27 47 27-47 27z" fill="#fff" stroke="#292929" stroke-width="1.5"/>
+              <path d="m142 178 47 27v12l-47-27z" fill="#dedede" stroke="#292929" stroke-width="1.5"/>
+              <path d="m189 205 47-27v12l-47 27z" fill="#c6c6c6" stroke="#292929" stroke-width="1.5"/>
+              <path d="m167 176 22-13 22 13-22 13z" fill="#efefef" stroke="#6c6c6c"/>
+              <path d="m181 174 8-5 8 5-8 5z" fill="#565656"/>
+              <path d="M158 188v7m62-7v7" stroke="#787878"/>
+            </g>
+            <g aria-hidden="true">
+              <text class="process-number" x="112" y="281">01</text>
+              <text class="process-label" x="134" y="281">HYPOTHESIS</text>
+            </g>
+
+            <g aria-hidden="true">
+              <ellipse cx="442" cy="251" rx="94" ry="22" fill="#111" opacity="0.06"/>
+              <path d="m354 202 88-51 88 51-88 51z" fill="#f7f7f7" stroke="#8c8c8c"/>
+              <path d="m354 202 88 51v22l-88-51z" fill="#d8d8d8" stroke="#8c8c8c"/>
+              <path d="m442 253 88-51v22l-88 51z" fill="#c4c4c4" stroke="#8c8c8c"/>
+              <path d="m385 196 28-16 28 16-28 16z" fill="#fff" stroke="#292929" stroke-width="1.5"/>
+              <path d="m385 196 28 16v25l-28-16z" fill="#dedede" stroke="#292929" stroke-width="1.5"/>
+              <path d="m413 212 28-16v25l-28 16z" fill="#bebebe" stroke="#292929" stroke-width="1.5"/>
+              <path d="m431 184 28-16 28 16-28 16z" fill="#fff" stroke="#292929" stroke-width="1.5"/>
+              <path d="m431 184 28 16v37l-28-16z" fill="#d6d6d6" stroke="#292929" stroke-width="1.5"/>
+              <path d="m459 200 28-16v37l-28 16z" fill="#b8b8b8" stroke="#292929" stroke-width="1.5"/>
+              <path d="m408 174 28-16 28 16-28 16z" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
+              <path d="m408 174 28 16v12l-28-16z" fill="#d8d8d8" stroke="#292929" stroke-width="1.5"/>
+              <path d="m436 190 28-16v12l-28 16z" fill="#c0c0c0" stroke="#292929" stroke-width="1.5"/>
+            </g>
+            <g aria-hidden="true">
+              <text class="process-number" x="365" y="296">02</text>
+              <text class="process-label" x="387" y="296">EXPERIMENT</text>
+            </g>
+
+            <g aria-hidden="true">
+              <ellipse cx="310" cy="419" rx="101" ry="23" fill="#111" opacity="0.07"/>
+              <path d="m214 359 96-55 96 55-96 56z" fill="#f7f7f7" stroke="#777"/>
+              <path d="m214 359 96 56v23l-96-56z" fill="#d6d6d6" stroke="#777"/>
+              <path d="m310 415 96-56v23l-96 56z" fill="#bcbcbc" stroke="#777"/>
+              <path d="m258 357 52-30 52 30-52 30z" fill="#fff" stroke="#292929" stroke-width="1.5"/>
+              <path d="m258 357 52 30v13l-52-30z" fill="#dedede" stroke="#292929" stroke-width="1.5"/>
+              <path d="m310 387 52-30v13l-52 30z" fill="#c2c2c2" stroke="#292929" stroke-width="1.5"/>
+              <path d="m278 357 13-8 12 3 15-15 25 10" fill="none" stroke="#424242" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="291" cy="349" r="2.8" fill="#424242"/>
+              <circle cx="318" cy="337" r="2.8" fill="#424242"/>
+              <circle cx="343" cy="347" r="2.8" fill="#424242"/>
+              <path d="m275 366 35 20m-18-30 35 20m-18-30 35 20" stroke="#b4b4b4"/>
+            </g>
+            <g aria-hidden="true">
+              <text class="process-number" x="251" y="461">03</text>
+              <text class="process-label" x="273" y="461">EVIDENCE</text>
+            </g>
+
+            <g aria-hidden="true">
+              <path d="m272 239 38-22 38 22-38 22z" fill="#fff" stroke="#8c8c8c"/>
+              <path d="m272 239 38 22v38l-38-22z" fill="#dcdcdc" stroke="#8c8c8c"/>
+              <path d="m310 261 38-22v38l-38 22z" fill="#c6c6c6" stroke="#8c8c8c"/>
+              <path d="M296 244c8-7 19-8 27-3" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#process-arrow)"/>
+              <path d="M324 254c-8 7-19 8-27 3" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#process-arrow)"/>
+            </g>
+          </svg>
         </div>
 
         <aside class="hero-profile" aria-label="Professional experience">
