@@ -4,12 +4,12 @@
 
 This is a dependency-free, single-page personal website. All production code lives in `index.html`:
 
-- `<head>` contains SEO, social metadata, the embedded favicon, and JSON-LD.
+- `<head>` contains SEO, social metadata, a link to `favicon.svg`, and JSON-LD.
 - `<style>` contains the complete mobile-first design system and responsive layout.
 - `<body>` contains semantic page sections such as `#about`, `#work`, and `#experience`.
 - The final `<script>` provides navigation and active-section behavior.
 
-There are currently no separate assets, generated files, or test directories. Preserve the single-file architecture unless a change clearly requires otherwise.
+The only separate production asset is `favicon.svg`; `build.py` copies it and the static metadata files into `dist/`. Preserve the single-file page architecture unless a change clearly requires otherwise.
 
 ## Build, Test, and Development Commands
 

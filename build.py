@@ -310,7 +310,7 @@ def build(source: Path, output_dir: Path) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / "index.html").write_text(minify_html(html), encoding="utf-8")
 
-    for filename in ("404.html", "robots.txt", "llms.txt"):
+    for filename in ("404.html", "favicon.svg", "robots.txt", "llms.txt"):
         metadata_file = source.parent / filename
         if not metadata_file.is_file():
             raise FileNotFoundError(f"Required file not found: {metadata_file}")
@@ -326,6 +326,7 @@ def main() -> None:
     build(args.source, args.output_dir)
     print(f"Built {args.output_dir / 'index.html'}")
     print(f"Copied {args.output_dir / '404.html'}")
+    print(f"Copied {args.output_dir / 'favicon.svg'}")
     print(f"Copied {args.output_dir / 'robots.txt'}")
     print(f"Copied {args.output_dir / 'llms.txt'}")
 
