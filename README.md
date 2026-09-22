@@ -70,7 +70,7 @@ Avoid introducing tinted grays, colored gradients, or additional accent colors w
 
 ## Build
 
-Generate the deployable site in `dist/`. The build keeps the HTML structure and metadata intact while minifying the inline CSS and JavaScript, then copies `404.html`, `favicon.svg`, `robots.txt`, and `llms.txt`:
+Generate the deployable site in `dist/`. The build keeps the HTML structure and metadata intact while minifying the inline CSS and JavaScript, then copies `404.html`, `favicon.svg`, `robots.txt`, `sitemap.xml`, and `llms.txt`:
 
 ```sh
 python3 build.py
